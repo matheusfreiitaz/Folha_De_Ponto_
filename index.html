@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Telecom | Sistema de Gestão de Ponto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <div class="logo-text">Nova telecom</div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-section="registrar">
+                    <i class="fas fa-clock"></i>
+                    <span>Registrar Ponto</span>
+                </a>
+                <a href="#" class="nav-item" data-section="calendario">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendário</span>
+                </a>
+                <a href="#" class="nav-item" data-section="ferias">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Férias</span>
+                </a>
+                <a href="#" class="nav-item" data-section="relatorios">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Relatórios</span>
+                </a>
+                <a href="#" class="nav-item" data-section="documentos">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Documentos</span>
+                </a>
+                <a href="#" class="nav-item admin-only" data-section="aprovar">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Aprovações</span>
+                </a>
+                <a href="#" class="nav-item admin-only" data-section="admin">
+                    <i class="fas fa-cog"></i>
+                    <span>Administração</span>
+                </a>
+                <a href="#" class="nav-item" data-section="equipe">
+                    <i class="fas fa-users"></i>
+                    <span>Minha Equipe</span>
+                </a>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="user-avatar">JD</div>
+                <div class="user-info">
+                    <div class="user-name">John Doe</div>
+                    <div class="user-role">Administrador</div>
+                </div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="header">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <section id="dashboard-section" class="section-content fade-in">
+                <div class="grid-4">
+                    <div class="status-card">
+                        <div class="status-icon primary">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="status-info">
+                            <div class="status-title">Horas Trabalhadas</div>
+                            <div class="status-value">168.5h</div>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-icon success">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="status-info">
+                            <div class="status-title">Banco de Horas</div>
+                            <div class="status-value">+12.5h</div>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-icon warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="status-info">
+                            <div class="status-title">Pendências</div>
+                            <div class="status-value">3</div>
+                        </div>
+                    </div>
+
+                    <div class="status-card">
+                        <div class="status-icon secondary">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="status-info">
+                            <div class="status-title">Documentos</div>
+                            <div class="status-value">5</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Últimos Registros</h3>
+                            <a href="#" class="text-sm text-primary">Ver todos</a>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Hoje, 08:15</div>
+                                    <h4 class="timeline-title">Entrada registrada</h4>
+                                    <p class="timeline-desc">Localização: Rua Principal, 123</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Ontem, 18:30</div>
+                                    <h4 class="timeline-title">Saída registrada</h4>
+                                    <p class="timeline-desc">Localização: Rua Principal, 123</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Ontem, 12:00</div>
+                                    <h4 class="timeline-title">Intervalo registrado</h4>
+                                    <p class="timeline-desc">Duração: 1h 15min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Atividade Recente</h3>
+                            <a href="#" class="text-sm text-primary">Ver tudo</a>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="dashboard-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Próximos Eventos</h3>
+                        <a href="#" class="text-sm text-primary">Ver calendário</a>
+                    </div>
+                    <div id="mini-calendar"></div>
+                </div>
+            </section>
+            
+            <section id="registrar-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Registrar Ponto</h3>
+                    </div>
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Método Tradicional</h4>
+                            <div class="form-group">
+                                <label class="form-label">Tipo de Registro</label>
+                                <select class="form-control" id="tipo-registro">
+                                    <option value="entrada">Entrada</option>
+                                    <option value="saida">Saída</option>
+                                    <option value="intervalo">Intervalo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Localização</label>
+                                <div id="location-info" class="text-sm text-primary mb-2">
+                                    <i class="fas fa-sync-alt fa-spin"></i> Obtendo localização...
+                                </div>
+                            </div>
+                            <button id="registrar-ponto-btn" class="btn btn-primary" disabled>
+                                <i class="fas fa-check-circle"></i> Registrar Ponto
+                            </button>
+                            <div id="registro-status" class="mt-4"></div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Reconhecimento Facial</h4>
+                            <div class="video-container">
+                                <video id="videoElement" autoplay playsinline></video>
+                                <div id="face-recognition-overlay" class="face-recognition-overlay" style="display: none;">
+                                    <div class="spinner"></div>
+                                    <p class="mt-3">Reconhecendo...</p>
+                                </div>
+                            </div>
+                            <button id="start-face-recognition" class="btn btn-secondary mt-4">
+                                <i class="fas fa-camera"></i> Iniciar Reconhecimento
+                            </button>
+                            <div id="face-recognition-status" class="mt-2 text-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="calendario-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Calendário de Pontos</h3>
+                        <div>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-print"></i> Imprimir
+                            </button>
+                        </div>
+                    </div>
+                    <div id="calendar"></div>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Banco de Horas</h3>
+                        </div>
+                        <div class="flex items-center justify-between p-4">
+                            <div>
+                                <p class="text-3xl font-bold text-primary" id="banco-horas-saldo">+12.5h</p>
+                                <p class="text-sm text-gray-500">Saldo atual</p>
+                            </div>
+                            <div id="banco-horas-chart" style="width: 150px; height: 150px;"></div>
+                        </div>
+                        <div class="p-4 border-t">
+                            <p class="text-sm text-gray-500 mb-2">Próximo acerto: 05/06/2023</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Limite mensal: 20h</span>
+                                <div class="w-1/2 bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-primary h-2.5 rounded-full" style="width: 62.5%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Estatísticas</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Horas trabalhadas</span>
+                                    <span class="text-sm font-medium text-gray-700">168.5h</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-success h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Horas extras</span>
+                                    <span class="text-sm font-medium text-gray-700">12.5h</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-warning h-2.5 rounded-full" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Faltas</span>
+                                    <span class="text-sm font-medium text-gray-700">1 dia</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-error h-2.5 rounded-full" style="width: 5%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="ferias-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Solicitar Férias</h3>
+                    </div>
+                    <form id="ferias-form">
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Data de Início</label>
+                                <input type="date" class="form-control" id="ferias-inicio" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Data de Término</label>
+                                <input type="date" class="form-control" id="ferias-fim" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Observações</label>
+                            <textarea class="form-control" id="ferias-obs" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Anexar Documento (Opcional)</label>
+                            <div id="ferias-document-dropzone" class="dropzone"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Solicitar Férias
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Minhas Solicitações</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Período</th>
+                                    <th>Dias</th>
+                                    <th>Status</th>
+                                    <th>Documentos</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ferias-items">
+                                <tr>
+                                    <td>15/07/2023 - 30/07/2023</td>
+                                    <td>15</td>
+                                    <td><span class="badge badge-success">Aprovado</span></td>
+                                    <td><span class="badge badge-primary">1</span></td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10/05/2023 - 25/05/2023</td>
+                                    <td>15</td>
+                                    <td><span class="badge badge-warning">Pendente</span></td>
+                                    <td><span class="badge badge-primary">2</span></td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>01/03/2023 - 15/03/2023</td>
+                                    <td>14</td>
+                                    <td><span class="badge badge-error">Recusado</span></td>
+                                    <td><span class="badge badge-primary">1</span></td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="relatorios-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Gerar Relatório</h3>
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Data Inicial</label>
+                            <input type="date" class="form-control" id="relatorio-inicio">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Data Final</label>
+                            <input type="date" class="form-control" id="relatorio-fim">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Tipo de Relatório</label>
+                        <select class="form-control" id="relatorio-tipo">
+                            <option value="mensal">Mensal</option>
+                            <option value="quinzenal">Quinzenal</option>
+                            <option value="personalizado">Personalizado</option>
+                            <option value="aprovacoes">Aprovações</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Formato</label>
+                        <select class="form-control" id="relatorio-formato">
+                            <option value="visual">Visualização</option>
+                            <option value="pdf">PDF</option>
+                            <option value="excel">Excel</option>
+                        </select>
+                    </div>
+                    <button id="gerar-relatorio-btn" class="btn btn-primary">
+                        <i class="fas fa-chart-pie"></i> Gerar Relatório
+                    </button>
+                </div>
+                
+                <div class="card" id="relatorio-resultado" style="display: none;">
+                    <div class="card-header">
+                        <h3 class="card-title">Resultado do Relatório</h3>
+                        <div>
+                            <button id="exportar-pdf-btn" class="btn btn-outline">
+                                <i class="fas fa-file-pdf"></i> Exportar PDF
+                            </button>
+                            <button id="exportar-excel-btn" class="btn btn-outline">
+                                <i class="fas fa-file-excel"></i> Exportar Excel
+                            </button>
+                            <button id="imprimir-relatorio-btn" class="btn btn-outline">
+                                <i class="fas fa-print"></i> Imprimir
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div id="relatorio-resumo" class="mb-6"></div>
+                        <div class="chart-container">
+                            <canvas id="relatorio-chart"></canvas>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold mb-3">Registros Detalhados</h4>
+                            <div class="overflow-x-auto">
+                                <table class="table" id="relatorio-detalhes">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Tipo</th>
+                                            <th>Horário</th>
+                                            <th>Localização</th>
+                                            <th>Status</th>
+                                            <th>Método</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="documentos-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Documentos</h3>
+                        <button id="novo-documento-btn" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Novo Documento
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="search-bar">
+                            <input type="text" class="search-input" placeholder="Buscar documentos...">
+                            <button class="search-button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="filter-bar">
+                            <select class="filter-select">
+                                <option>Todos os Tipos</option>
+                                <option>Comprovante</option>
+                                <option>Atestado</option>
+                                <option>Holerite</option>
+                                <option>Outros</option>
+                            </select>
+                            <select class="filter-select">
+                                <option>Todos os Status</option>
+                                <option>Pendente</option>
+                                <option>Aprovado</option>
+                                <option>Rejeitado</option>
+                            </select>
+                        </div>
+                        <div class="document-list" id="documentos-list">
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="document-info">
+                                    <div class="document-name">Comprovante de Horas Extras - Junho 2023</div>
+                                    <div class="document-meta">Enviado em 05/07/2023 | Tipo: Comprovante</div>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <div class="document-info">
+                                    <div class="document-name">Atestado Médico</div>
+                                    <div class="document-meta">Enviado em 15/06/2023 | Tipo: Atestado</div>
+                                </div>
+                                <div class="document-actions">
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="documento-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Adicionar Documento</h3>
+                            <button class="btn btn-outline btn-sm" id="documento-modal-close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="documento-form">
+                                <div class="form-group">
+                                    <label class="form-label">Tipo de Documento</label>
+                                    <select class="form-control" id="documento-tipo" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="comprovante">Comprovante</option>
+                                        <option value="atestado">Atestado</option>
+                                        <option value="holerite">Holerite</option>
+                                        <option value="outros">Outros</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Data Referência</label>
+                                    <input type="date" class="form-control" id="documento-data" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Descrição</label>
+                                    <textarea class="form-control" id="documento-descricao" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Arquivo</label>
+                                    <div id="document-dropzone" class="dropzone"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline" id="documento-modal-cancel">Cancelar</button>
+                            <button class="btn btn-primary" id="documento-modal-save">Salvar Documento</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aprovar-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Aprovações Pendentes</h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="tabs">
+                            <div class="tab active" data-tab="pontos">Registros de Ponto</div>
+                            <div class="tab" data-tab="ferias">Solicitações de Férias</div>
+                            <div class="tab" data-tab="documentos">Documentos</div>
+                        </div>
+
+                        <div class="tab-content active" id="pontos-tab">
+                            <div class="search-bar">
+                                <input type="text" class="search-input" placeholder="Buscar registros...">
+                                <button class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="approval-list" id="pontos-approval-list">
+                                <div class="approval-item">
+                                    <div class="approval-info">
+                                        <div class="approval-title">Registro de Entrada - 15/07/2023 08:15</div>
+                                        <div class="approval-meta">João Silva | Localização: -23.5505, -46.6333</div>
+                                    </div>
+                                    <div class="approval-actions">
+                                        <button class="btn btn-success btn-sm">
+                                            <i class="fas fa-check"></i> Aprovar
+                                        </button>
+                                        <button class="btn btn-error btn-sm">
+                                            <i class="fas fa-times"></i> Rejeitar
+                                        </button>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i> Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="approval-item">
+                                    <div class="approval-info">
+                                        <div class="approval-title">Registro de Saída - 14/07/2023 18:30</div>
+                                        <div class="approval-meta">Maria Souza | Localização: -23.5512, -46.6341</div>
+                                    </div>
+                                    <div class="approval-actions">
+                                        <button class="btn btn-success btn-sm">
+                                            <i class="fas fa-check"></i> Aprovar
+                                        </button>
+                                        <button class="btn btn-error btn-sm">
+                                            <i class="fas fa-times"></i> Rejeitar
+                                        </button>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i> Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="ferias-tab" style="display: none;">
+                            <div class="search-bar">
+                                <input type="text" class="search-input" placeholder="Buscar solicitações...">
+                                <button class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="approval-list" id="ferias-approval-list">
+                                <div class="approval-item">
+                                    <div class="approval-info">
+                                        <div class="approval-title">Férias - 01/08/2023 a 15/08/2023 (15 dias)</div>
+                                        <div class="approval-meta">Carlos Oliveira | Solicitado em 10/07/2023</div>
+                                    </div>
+                                    <div class="approval-actions">
+                                        <button class="btn btn-success btn-sm">
+                                            <i class="fas fa-check"></i> Aprovar
+                                        </button>
+                                        <button class="btn btn-error btn-sm">
+                                            <i class="fas fa-times"></i> Rejeitar
+                                        </button>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i> Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="documentos-tab" style="display: none;">
+                            <div class="search-bar">
+                                <input type="text" class="search-input" placeholder="Buscar documentos...">
+                                <button class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="approval-list" id="documentos-approval-list">
+                                <div class="approval-item">
+                                    <div class="approval-info">
+                                        <div class="approval-title">
+                                            <i class="fas fa-file-pdf mr-2"></i> Atestado Médico
+                                        </div>
+                                        <div class="approval-meta">Ana Santos | Enviado em 12/07/2023</div>
+                                    </div>
+                                    <div class="approval-actions">
+                                        <button class="btn btn-success btn-sm">
+                                            <i class="fas fa-check"></i> Aprovar
+                                        </button>
+                                        <button class="btn btn-error btn-sm">
+                                            <i class="fas fa-times"></i> Rejeitar
+                                        </button>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-eye"></i> Ver
+                                        </button>
+                                        <button class="btn btn-outline btn-sm">
+                                            <i class="fas fa-download"></i> Baixar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="approval-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="approval-modal-title">Aprovar Registro</h3>
+                            <button class="btn btn-outline btn-sm" id="approval-modal-close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="approval-modal-content">
+                            </div>
+                        <div class="modal-footer">
+                            <div class="comment-box">
+                                <textarea class="comment-textarea" id="approval-comment" placeholder="Adicionar comentário (opcional)"></textarea>
+                            </div>
+                            <button class="btn btn-outline" id="approval-modal-reject">Rejeitar</button>
+                            <button class="btn btn-primary" id="approval-modal-approve">Aprovar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="admin-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Painel Administrativo</h3>
+                    </div>
+                    <div class="grid-3">
+                        <div class="status-card">
+                            <div class="status-icon primary">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-title">Colaboradores</div>
+                                <div class="status-value">42</div>
+                            </div>
+                        </div>
+                        
+                        <div class="status-card">
+                            <div class="status-icon warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-title">Pendências</div>
+                                <div class="status-value">15</div>
+                            </div>
+                        </div>
+                        
+                        <div class="status-card">
+                            <div class="status-icon error">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="status-info">
+                                <div class="status-title">Atrasos (mês)</div>
+                                <div class="status-value">28</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Solicitações de Férias Pendentes</h3>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Colaborador</th>
+                                            <th>Período</th>
+                                            <th>Dias</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="admin-ferias-pendentes">
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Registros Recentes</h3>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Colaborador</th>
+                                            <th>Data/Hora</th>
+                                            <th>Tipo</th>
+                                            <th>Método</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="admin-pontos-recentes">
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="equipe-section" class="section-content" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Minha Equipe</h3>
+                        <div class="header-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-filter"></i> Filtrar
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-sync-alt"></i> Atualizar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="search-bar">
+                            <input type="text" class="search-input" placeholder="Buscar membros da equipe...">
+                            <button class="search-button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="team-list" id="team-members-list">
+                            <div class="team-member">
+                                <div class="team-member-avatar" style="background-color: #00e5ff;">AM</div>
+                                <div class="team-member-info">
+                                    <div class="team-member-name">Ana Maria</div>
+                                    <div class="team-member-role">Analista de Vendas | Departamento: Comercial</div>
+                                </div>
+                                <div class="team-member-actions">
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-eye"></i> Visualizar
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-envelope"></i> Contatar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="team-member-avatar" style="background-color: #ff4081;">CS</div>
+                                <div class="team-member-info">
+                                    <div class="team-member-name">Carlos Silva</div>
+                                    <div class="team-member-role">Supervisor | Departamento: Operações</div>
+                                </div>
+                                <div class="team-member-actions">
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-eye"></i> Visualizar
+                                    </button>
+                                    <button class="btn btn-outline btn-sm">
+                                        <i class="fas fa-envelope"></i> Contatar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="team-member-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Detalhes do Membro</h3>
+                            <button class="btn btn-outline btn-sm" id="team-member-modal-close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="grid-2">
+                                <div>
+                                    <div class="team-member-avatar large" style="background-color: #00e5ff; width: 80px; height: 80px; font-size: 2rem;">AM</div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold">Ana Maria</h4>
+                                    <p class="text-gray-500">Analista de Vendas</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 grid-2">
+                                <div>
+                                    <h5 class="font-semibold mb-2">Informações Pessoais</h5>
+                                    <p><strong>Email:</strong> ana.maria@empresa.com</p>
+                                    <p><strong>Telefone:</strong> (11) 98765-4321</p>
+                                    <p><strong>Data de Admissão:</strong> 15/03/2020</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold mb-2">Informações Profissionais</h5>
+                                    <p><strong>Departamento:</strong> Comercial</p>
+                                    <p><strong>Cargo:</strong> Analista de Vendas</p>
+                                    <p><strong>Gestor:</strong> Carlos Silva</p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <h5 class="font-semibold mb-2">Estatísticas Recentes</h5>
+                                <div class="grid-3">
+                                    <div class="status-card small">
+                                        <div class="status-icon primary">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="status-info">
+                                            <div class="status-title">Horas/Mês</div>
+                                            <div class="status-value">168h</div>
+                                        </div>
+                                    </div>
+                                    <div class="status-card small">
+                                        <div class="status-icon warning">
+                                            <i class="fas fa-exclamation"></i>
+                                        </div>
+                                        <div class="status-info">
+                                            <div class="status-title">Atrasos</div>
+                                            <div class="status-value">2</div>
+                                        </div>
+                                    </div>
+                                    <div class="status-card small">
+                                        <div class="status-icon success">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="status-info">
+                                            <div class="status-title">Produtividade</div>
+                                            <div class="status-value">92%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline" id="team-member-modal-close-btn">Fechar</button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-envelope"></i> Enviar Mensagem
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div class="modal" id="notification-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Notificação</h3>
+                <button class="btn btn-outline btn-sm" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Mensagem de notificação aqui</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="modal-cancel">Cancelar</button>
+                <button class="btn btn-primary" id="modal-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast-container" id="toast-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
