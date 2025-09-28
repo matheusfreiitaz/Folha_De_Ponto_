@@ -1,131 +1,67 @@
-  ![image](https://github.com/user-attachments/assets/f2c300c0-6689-48c2-960a-49b5b5bee5df)
-![image](https://github.com/user-attachments/assets/ec38aa3b-7272-462a-9df3-9df9155a0bc1)
-![image](https://github.com/user-attachments/assets/27feccea-5cb9-4998-91be-84cc8589ed6d)
-
-
 Sistema de Gestão de Ponto - Nova Telecom
+Um sistema web completo e moderno para gestão de ponto, férias e documentos, desenvolvido para a Nova Telecom.
 
+📸 Demonstração Visual
+✨ Funcionalidades Principais
+🕒 Registro de Ponto Inteligente: Marcação com geolocalização e reconhecimento facial.
 
-O Sistema de Gestão de Ponto da Nova Telecom é uma aplicação web moderna e responsiva, voltada para o controle de jornada de trabalho, solicitação de férias e gestão de documentos corporativos.
+📅 Calendário Interativo: Visualização completa de registros e eventos.
 
-✨ Funcionalidades
-🕒 Registro de ponto com geolocalização e reconhecimento facial
+🏖️ Gestão de Férias: Fluxo completo de solicitação e aprovação.
 
-📅 Calendário interativo com visualização completa de registros
+📊 Relatórios Detalhados: Geração de relatórios com exportação para PDF e Excel.
 
-🏖 Solicitação e gerenciamento de férias
+📁 Controle de Documentos: Upload e gerenciamento de arquivos corporativos.
 
-📊 Relatórios detalhados, com exportação para PDF e Excel
+✔️ Fluxo de Aprovação: Sistema de aprovação de solicitações para gestores.
 
-📁 Upload e controle de documentos importantes
+👥 Administração: Gerenciamento de colaboradores e departamentos.
 
-✔️ Sistema de aprovação de solicitações para gestores
+📱 Design Responsivo: Interface adaptável a desktops, tablets e smartphones.
 
-👥 Gestão de colaboradores e departamentos
-
-📱 Interface responsiva, adaptável a todos os dispositivos
-
-🛠 Tecnologias Utilizadas
-Front-end
-HTML5 semântico
-
-CSS3 moderno, com uso de variáveis, Flexbox e Grid
-
-JavaScript ES6+ modular
-
-Bibliotecas
-FullCalendar – Gestão de calendários
-
-Chart.js – Visualização de dados em gráficos
-
-Dropzone.js – Upload intuitivo de arquivos
-
-TensorFlow.js – Reconhecimento facial via IA
-
-Padrões e Metodologias
-Arquitetura modular e componentizada
-
-Design System com variáveis CSS
-
-Princípios Clean Code e SOLID
+🛠️ Tecnologias e Ferramentas
+O projeto foi construído com foco em tecnologias modernas e boas práticas de desenvolvimento.
 
 🚀 Como Executar o Projeto
-✔️ Pré-requisitos
-Navegador moderno (Chrome, Firefox, Edge)
+Siga os passos abaixo para executar o projeto em seu ambiente local.
 
-Node.js (opcional para desenvolvimento)
+Pré-requisitos:
 
-📦 Instalação Local
+ (versão LTS recomendada)
+
+Um navegador moderno (Chrome, Firefox, etc.)
+
+Passo a passo:
+
 Clone o repositório:
 
-
-git clone https://github.com/seu-usuario/nova-telecom-ponto.git
 Acesse a pasta do projeto:
 
+Instale as dependências:
 
-cd nova-telecom-ponto
-Instale as dependências (se aplicável):
-
-
-npm install
 Inicie o servidor de desenvolvimento:
 
-
-npm start
 Acesse no navegador:
+Abra  para ver a aplicação.
 
-
-http://localhost:3000
 📁 Estrutura de Arquivos
+O projeto segue uma estrutura de arquivos modular para facilitar a manutenção e escalabilidade:
 
-nova-telecom-ponto/
-├── assets/          # Arquivos estáticos (imagens, ícones, etc.)
-├── components/      # Componentes reutilizáveis
-├── css/             # Estilos CSS organizados
-├── js/              # Scripts da aplicação
-│   ├── lib/         # Bibliotecas de terceiros
-│   ├── models/      # Modelos de dados
-│   ├── services/    # Serviços (ex: chamadas a APIs)
-│   ├── utils/       # Funções utilitárias
-│   └── pages/       # Scripts específicos por página
-├── index.html       # Página inicial da aplicação
-└── README.md        # Documentação
-🧑‍💻 Desenvolvimento
-📌 Convenções de Código
-CSS: Metodologia BEM + variáveis CSS
+🤝 Como Contribuir
+Contribuições são muito bem-vindas! Se você deseja colaborar, por favor siga os passos abaixo:
 
-JavaScript: Padrão ES6+ com módulos
+Faça um Fork do projeto.
 
-Commits: Seguem o padrão Conventional Commits
+Crie uma nova branch para sua feature (git checkout -b feature/minha-feature).
 
-🔧 Scripts Úteis
+Faça o commit de suas alterações (git commit -m "feat: Adiciona minha-feature").
 
-npm run lint       # Verifica a qualidade do código
-npm run format     # Formata automaticamente o código
-npm run build      # Gera versão de produção do sistema
-🤝 Contribuições
-Contribuições são bem-vindas!
-Para colaborar, siga os passos abaixo:
+Envie para a sua branch (git push origin feature/minha-feature).
 
-Faça um fork do projeto
-
-Crie uma branch:
-
-
-git checkout -b feature/nova-feature
-Commit suas alterações:
-
-
-git commit -m "feat: adiciona nova feature"
-Envie para o repositório remoto:
-
-
-git push origin feature/nova-feature
-Abra um Pull Request 🚀
+Abra um Pull Request.
 
 📄 Licença
-Este projeto está sob a licença MIT.
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ✉️ Contato
-Equipe de Desenvolvimento – matheusfreiitas77@gmail.com
-
+Equipe de Desenvolvimento - matheusfreiitas77@gmail.com
