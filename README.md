@@ -3,7 +3,7 @@ Um sistema web completo e moderno para gestão de ponto, férias e documentos, d
 
 📸 Demonstração Visual
 ✨ Funcionalidades Principais
-🕒 Registro de Ponto Inteligente: Marcação com geolocalização e reconhecimento facial.
+🕒 Registro de Ponto Inteligente: Marcação com geolocalização e reconhecimento facial. 
 
 📅 Calendário Interativo: Visualização completa de registros e eventos.
 
