@@ -1,7 +1,7 @@
 Sistema de Gestão de Ponto - Nova Telecom
 Um sistema web completo e moderno para gestão de ponto, férias e documentos, desenvolvido para a Nova Telecom.
 
-📸 Demonstração Visual
+📸 Demonstração Visual 
 ✨ Funcionalidades Principais
 🕒 Registro de Ponto Inteligente: Marcação com geolocalização e reconhecimento facial. 
 
