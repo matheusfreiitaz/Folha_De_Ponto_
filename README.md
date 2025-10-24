@@ -9,7 +9,7 @@ Um sistema web completo e moderno para gestão de ponto, férias e documentos, d
 
 🏖️ Gestão de Férias: Fluxo completo de solicitação e aprovação.
 
-📊 Relatórios Detalhados: Geração de relatórios com exportação para PDF e Excel. 
+📊 Relatórios Detalhados: Geração de relatórios com exportação para PDF e Excel.  
  
 📁 Controle de Documentos: Upload e gerenciamento de arquivos corporativos.
  
