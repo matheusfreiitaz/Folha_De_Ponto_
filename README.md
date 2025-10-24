@@ -6,7 +6,7 @@ Um sistema web completo e moderno para gestão de ponto, férias e documentos, d
 🕒 Registro de Ponto Inteligente: Marcação com geolocalização e reconhecimento facial. 
 
 📅 Calendário Interativo: Visualização completa de registros e eventos.
-
+ 
 🏖️ Gestão de Férias: Fluxo completo de solicitação e aprovação. 
 
 📊 Relatórios Detalhados: Geração de relatórios com exportação para PDF e Excel.  
